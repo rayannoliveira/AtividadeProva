@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/AtividadeJava/src-gen" creationIcons="false" editDirectory="/AtividadeJava.edit/src-gen"
+    editorDirectory="/AtividadeJava.editor/src-gen" modelPluginID="AtividadeJava"
+    modelName="AtividadeJava" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>atividadeJava.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="AtividadeJava" disposableProviderFactory="true" ecorePackage="atividadeJava.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="atividadeJava.ecore#//Type">
+      <genEnumLiterals ecoreEnumLiteral="atividadeJava.ecore#//Type/String"/>
+      <genEnumLiterals ecoreEnumLiteral="atividadeJava.ecore#//Type/Boolean"/>
+      <genEnumLiterals ecoreEnumLiteral="atividadeJava.ecore#//Type/int"/>
+      <genEnumLiterals ecoreEnumLiteral="atividadeJava.ecore#//Type/float"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="atividadeJava.ecore#//Vis">
+      <genEnumLiterals ecoreEnumLiteral="atividadeJava.ecore#//Vis/public"/>
+      <genEnumLiterals ecoreEnumLiteral="atividadeJava.ecore#//Vis/private"/>
+      <genEnumLiterals ecoreEnumLiteral="atividadeJava.ecore#//Vis/protected"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="atividadeJava.ecore#//Direction">
+      <genEnumLiterals ecoreEnumLiteral="atividadeJava.ecore#//Direction/input"/>
+      <genEnumLiterals ecoreEnumLiteral="atividadeJava.ecore#//Direction/output"/>
+      <genEnumLiterals ecoreEnumLiteral="atividadeJava.ecore#//Direction/inputOutput"/>
+      <genEnumLiterals ecoreEnumLiteral="atividadeJava.ecore#//Direction/return"/>
+    </genEnums>
+    <genClasses ecoreClass="atividadeJava.ecore#//JPackage">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference atividadeJava.ecore#//JPackage/jelement"/>
+    </genClasses>
+    <genClasses ecoreClass="atividadeJava.ecore#//JElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atividadeJava.ecore#//JElement/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference atividadeJava.ecore#//JElement/jpackage"/>
+    </genClasses>
+    <genClasses ecoreClass="atividadeJava.ecore#//JClassifier"/>
+    <genClasses ecoreClass="atividadeJava.ecore#//JClass">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atividadeJava.ecore#//JClass/visibility"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference atividadeJava.ecore#//JClass/jfield"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference atividadeJava.ecore#//JClass/jmethod"/>
+    </genClasses>
+    <genClasses ecoreClass="atividadeJava.ecore#//JInterface"/>
+    <genClasses ecoreClass="atividadeJava.ecore#//JMethod">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atividadeJava.ecore#//JMethod/isAbstract"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference atividadeJava.ecore#//JMethod/jclass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference atividadeJava.ecore#//JMethod/jparameter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atividadeJava.ecore#//JMethod/visibility"/>
+    </genClasses>
+    <genClasses ecoreClass="atividadeJava.ecore#//JField">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference atividadeJava.ecore#//JField/jclass"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atividadeJava.ecore#//JField/visibility"/>
+    </genClasses>
+    <genClasses ecoreClass="atividadeJava.ecore#//JParameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atividadeJava.ecore#//JParameter/direction"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference atividadeJava.ecore#//JParameter/jmethod"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

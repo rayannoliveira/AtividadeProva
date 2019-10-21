@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/AtividadeC/src-gen" creationIcons="false" editDirectory="/AtividadeC.edit/src-gen"
+    editorDirectory="/AtividadeC.editor/src-gen" modelPluginID="AtividadeC" modelName="AtividadeC"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>atividadeC.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="AtividadeC" disposableProviderFactory="true" ecorePackage="atividadeC.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="atividadeC.ecore#//Lib">
+      <genEnumLiterals ecoreEnumLiteral="atividadeC.ecore#//Lib/stdlib"/>
+      <genEnumLiterals ecoreEnumLiteral="atividadeC.ecore#//Lib/stdio"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="atividadeC.ecore#//Type">
+      <genEnumLiterals ecoreEnumLiteral="atividadeC.ecore#//Type/int"/>
+      <genEnumLiterals ecoreEnumLiteral="atividadeC.ecore#//Type/float"/>
+      <genEnumLiterals ecoreEnumLiteral="atividadeC.ecore#//Type/char"/>
+      <genEnumLiterals ecoreEnumLiteral="atividadeC.ecore#//Type/boolean"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="atividadeC.ecore#//Reservada">
+      <genEnumLiterals ecoreEnumLiteral="atividadeC.ecore#//Reservada/printf"/>
+      <genEnumLiterals ecoreEnumLiteral="atividadeC.ecore#//Reservada/scanf"/>
+    </genEnums>
+    <genClasses ecoreClass="atividadeC.ecore#//Function">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atividadeC.ecore#//Function/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atividadeC.ecore#//Function/res"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference atividadeC.ecore#//Function/programa"/>
+    </genClasses>
+    <genClasses ecoreClass="atividadeC.ecore#//Struct">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference atividadeC.ecore#//Struct/programa"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atividadeC.ecore#//Struct/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atividadeC.ecore#//Struct/res"/>
+    </genClasses>
+    <genClasses ecoreClass="atividadeC.ecore#//Main">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atividadeC.ecore#//Main/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atividadeC.ecore#//Main/res"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference atividadeC.ecore#//Main/programa"/>
+    </genClasses>
+    <genClasses ecoreClass="atividadeC.ecore#//Biblioteca">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference atividadeC.ecore#//Biblioteca/programa"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atividadeC.ecore#//Biblioteca/library"/>
+    </genClasses>
+    <genClasses ecoreClass="atividadeC.ecore#//Programa">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference atividadeC.ecore#//Programa/biblioteca"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference atividadeC.ecore#//Programa/struct"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference atividadeC.ecore#//Programa/function"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference atividadeC.ecore#//Programa/main"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute atividadeC.ecore#//Programa/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
